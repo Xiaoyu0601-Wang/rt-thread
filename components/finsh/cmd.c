@@ -442,7 +442,12 @@ long list_timer(void)
 }
 FINSH_FUNCTION_EXPORT(list_timer, list timer in system);
 MSH_CMD_EXPORT(list_timer, list timer in system);
-
+long cmd_clear(rt_uint32_t argc, char** argv)
+{
+    	rt_kprintf("\033[H\033[J");
+	return 0;
+}
+FINSH_FUNCTION_EXPORT_ALIAS(cmd_clear, __cmd_clear, Clear Screen.);
 #ifdef RT_USING_DEVICE
 static long _list_device(struct rt_list_node *list)
 {
