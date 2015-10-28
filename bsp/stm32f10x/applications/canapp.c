@@ -26,7 +26,7 @@ struct stm32_hw_pin_userdata
 {
     int pin;
     uint32_t mode;
-}
+};
 static struct canledtype
 {
     struct stm32_hw_pin_userdata rtd;
